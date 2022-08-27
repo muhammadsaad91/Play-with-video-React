@@ -1,28 +1,39 @@
 import React from "react";
+import { useRef } from "react";
 import { useState } from "react";
-import { useEffect } from "react";
-import "./App.css";
+import "./index.css"
+
 
 const App = () => {
-  const [count, setCount] = useState(window.screen.width);
-  const [count2, setCount2] = useState(window.screen.height);
+  const [play , setPlay] = useState("Play");
+  const inputRef = useRef();
+  
 
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      setCount(window.screen.width);
-      setCount2(window.screen.height);
-    });
-  });
+  const click = () => {
+
+    if (play === "Play") {
+      setPlay("Pause");
+      inputRef.current.play();
+    } else {
+      setPlay("Play");
+      inputRef.current.pause();
+    }
+  }
+  
+
+
+
   return (
-      <>
-    <div className="app">
-      <h1>Your Screen Width is <strong style={{color:"red"}}>{count}</strong></h1>
-      <br></br>
-      <br></br>
-      <h1 >Your Screen Height is <strong style={{color:"red"}}>{count2}</strong></h1>
-    </div>;
-  </>
+    <div className="main">
+      <button onClick={click}>{play}</button>
+
+      <video ref={inputRef}>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4"  type="video/mp4" />
+      </video>
+    </div>
   );
 }
 
 export default App;
+
+
