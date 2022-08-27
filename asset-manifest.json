@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Play-with-video-React/static/css/main.36cfd48b.css",
+    "main.js": "/Play-with-video-React/static/js/main.bf212604.js",
+    "index.html": "/Play-with-video-React/index.html",
+    "main.36cfd48b.css.map": "/Play-with-video-React/static/css/main.36cfd48b.css.map",
+    "main.bf212604.js.map": "/Play-with-video-React/static/js/main.bf212604.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.36cfd48b.css",
+    "static/js/main.bf212604.js"
+  ]
+}
